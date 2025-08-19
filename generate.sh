@@ -26,6 +26,7 @@ emcc \
     -s FILESYSTEM=0 \
     -s 'EXPORTED_RUNTIME_METHODS=["stringToUTF8", "UTF8ToString", "HEAP32"]' \
     -s WASM=0 \
+    -s MODULARIZE \
     -s STACK_SIZE=65536 \
     -s INITIAL_MEMORY=1048576
 
