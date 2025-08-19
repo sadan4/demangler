@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "pnpm generate:test && vitest run",
-    "build": "./build.sh",
+    "build": "pnpm generate && ./build.sh",
     "generate": "./generate.sh",
     "generate:test": "node generateTestCases.mts"
   },
