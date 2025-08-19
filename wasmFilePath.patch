@@ -1,0 +1,20 @@
+--- compiled.cjs	2025-08-19 19:32:59.753454913 -0400
++++ compiledcopy.cjs	2025-08-19 19:32:47.586204117 -0400
+@@ -9,7 +9,7 @@
+   // after document.currentScript is gone, so we save it.
+   // In EXPORT_ES6 mode we can just use 'import.meta.url'.
+   var _scriptName = typeof document != 'undefined' ? document.currentScript?.src : undefined;
+-  return async function(moduleArg = {}) {
++  return async function(wasmFilePath, moduleArg = {},) {
+     var moduleRtn;
+ 
+ // include: shell.js
+@@ -380,7 +380,7 @@
+ var wasmBinaryFile;
+ 
+ function findWasmBinary() {
+-    return locateFile('compiled.wasm');
++    return locateFile(wasmFilePath || 'compiled.wasm');
+ }
+ 
+ function getBinarySync(file) {

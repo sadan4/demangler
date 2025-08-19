@@ -8,7 +8,8 @@ const entries = (await import("../textCases.json", {
     },
 })).default as TestCase[];
 
-const { demangler } = await import(".");
+const { makeDemangler } = await import(".");
+const demangler = await makeDemangler();
 
 for (const [mangled, demangled] of entries) {
     test(`demangle "${mangled}"`, () => {

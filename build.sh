@@ -8,5 +8,5 @@ cp src/wasm/compiled.wasm wasm/compiled.wasm
 cp src/wasm/compiled.wasm.map wasm/compiled.wasm.map
 
 # copy type definitions
-cp ./index.d.ts wasm/index.d.ts
-cp ./index.d.ts js/index.d.ts
+cp src/wasm/index.d.ts wasm/index.d.ts
+cp src/js/index.d.ts js/index.d.ts

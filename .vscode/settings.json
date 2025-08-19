@@ -3,6 +3,7 @@
         "demangled",
         "emcc",
         "flto",
-        "malloc"
+        "malloc",
+        "patchfile"
     ],
 }

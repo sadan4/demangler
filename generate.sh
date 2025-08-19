@@ -17,6 +17,11 @@ emcc \
 cat $tmpfile src/wasm/compiled.cjs > src/wasm/compiled.tmp.cjs
 mv src/wasm/compiled.tmp.cjs src/wasm/compiled.cjs
 
+tempPatchOutput=$(mktemp)
+patchfile=./wasmFilePath.patch
+patch src/wasm/compiled.cjs $patchfile -o $tempPatchOutput
+mv $tempPatchOutput src/wasm/compiled.cjs
+
 emcc \
     empty.cpp \
     -o src/js/compiled.cjs \
