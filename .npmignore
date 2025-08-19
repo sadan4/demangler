@@ -9,3 +9,4 @@
 /generateTestCases.mts
 /tsconfig.json
 *.tgz
+/wasmFilePath.patch
