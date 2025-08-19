@@ -7,4 +7,7 @@ declare class Demangler {
     demangle(str: string): string | null;
 }
 
-export function makeDemangler(): Promise<Demangler>;
+/**
+ * @param maxSize the max size of string that the demangler can handle. Defaults to 1 << 11
+ */
+export function makeDemangler(maxSize?: number): Promise<Demangler>;
