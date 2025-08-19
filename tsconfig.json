@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "outDir": "never",
+        "module": "esnext",
+        "moduleResolution": "bundler",
+        "target": "esnext",
+        "lib": [
+            "ESNEXT"
+        ],
+        "strict": true,
+        "noImplicitAny": true,
+        "allowJs": true
+    },
+    "include": [
+        "src",
+        "eslint.config.mts",
+        "generateTestCases.mts"
+    ],
+    "exclude": [
+        "node_modules",
+    ]
+}

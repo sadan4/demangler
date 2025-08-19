@@ -1,0 +1,5 @@
+node_modules
+src/js/compiled.js
+src/wasm/compiled.js
+src/wasm/compiled.wasm
+src/wasm/compiled.wasm.map
