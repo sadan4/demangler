@@ -1,0 +1,11 @@
+/src
+/index.d.ts
+/.vscode
+/node_modules
+/.gitignore
+/*.sh
+/empty.cpp
+/eslint.config.*
+/generateTestCases.mts
+/tsconfig.json
+*.tgz

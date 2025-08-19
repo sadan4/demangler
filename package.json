@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "pnpm generate:test && vitest run",
+    "build": "./build.sh",
     "generate": "./generate.sh",
     "generate:test": "node generateTestCases.mts"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "LGPL-3.0-or-later",
   "devDependencies": {
     "@stylistic/eslint-plugin": "^5.2.3",
     "@types/node": "^24.3.0",

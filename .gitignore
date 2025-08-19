@@ -6,3 +6,4 @@ src/wasm/compiled.wasm.map
 src/js/compiled.cjs
 src/wasm/compiled.cjs
 dist
+demangler-1.0.0.tgz

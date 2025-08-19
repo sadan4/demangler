@@ -2,7 +2,7 @@ import mod from "./compiled.cjs";
 import { CompiledModule } from "../types";
 import { Demangler } from "../wrapper";
 
-export const makeDemangler = async () => new Demangler(
-    (globalThis as any).DEMANGLER_MAX_SIZE ?? (1 << 14),
+export const makeDemangler = async (maxSize = 1 << 14) => new Demangler(
+    maxSize,
     await mod() as CompiledModule,
 );
