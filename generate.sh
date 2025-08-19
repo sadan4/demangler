@@ -3,7 +3,7 @@ tmpfile=$(mktemp)
 echo '/* eslint-disable */' > $tmpfile
 emcc \
     empty.cpp \
-    -o src/wasm/compiled.js \
+    -o src/wasm/compiled.cjs \
     -Oz \
     -flto \
     -s 'EXPORTED_FUNCTIONS=["___cxa_demangle", "_malloc", "_free"]' \
@@ -14,12 +14,12 @@ emcc \
     -gsource-map=inline \
     -s STACK_SIZE=65536 \
     -s INITIAL_MEMORY=1048576
-cat $tmpfile src/wasm/compiled.js > src/wasm/compiled.tmp.js
-mv src/wasm/compiled.tmp.js src/wasm/compiled.js
+cat $tmpfile src/wasm/compiled.cjs > src/wasm/compiled.tmp.cjs
+mv src/wasm/compiled.tmp.cjs src/wasm/compiled.cjs
 
 emcc \
     empty.cpp \
-    -o src/js/compiled.js \
+    -o src/js/compiled.cjs \
     -Oz \
     -flto \
     -s 'EXPORTED_FUNCTIONS=["___cxa_demangle", "_malloc", "_free"]' \
@@ -29,5 +29,5 @@ emcc \
     -s STACK_SIZE=65536 \
     -s INITIAL_MEMORY=1048576
 
-cat $tmpfile src/js/compiled.js > src/js/compiled.tmp.js
-mv src/js/compiled.tmp.js src/js/compiled.js
+cat $tmpfile src/js/compiled.cjs > src/js/compiled.tmp.cjs
+mv src/js/compiled.tmp.cjs src/js/compiled.cjs

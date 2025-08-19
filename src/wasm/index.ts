@@ -1,4 +1,4 @@
-import mod from "./compiled";
+import mod from "./compiled.cjs";
 import { CompiledModule } from "../types";
 import { Demangler } from "../wrapper";
 
